@@ -35,7 +35,7 @@ This project is automatically deployed on Vercel. Every push to the main branch 
 
 ```bash
 # Clone the repository
-git clone <your-repository-url>
+git clone https://github.com/navneet-97/building_bharat_webpage
 cd building-bharat
 
 # Install dependencies
