@@ -35,7 +35,6 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  // Close mobile menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -47,7 +46,6 @@ export default function Home() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (isMobileMenuOpen && !(event.target as Element).closest('header')) {
@@ -207,8 +205,7 @@ export default function Home() {
               >
                 {services.map((service, index) => {
                   const angle = (index * 60) - 90;
-                  // Much larger radius for better spacing - responsive values
-                  const radius = 140; // Base radius - will look good on all screen sizes
+                  const radius = 140; 
                   const x = Math.cos(angle * Math.PI / 180) * radius;
                   const y = Math.sin(angle * Math.PI / 180) * radius;
 

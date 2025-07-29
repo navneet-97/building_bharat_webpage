@@ -96,46 +96,36 @@
   width: max-content;
 }
 
-/* Responsive service circle adjustments */
-/* Note: The radius is now handled directly in the component with increased values */
 .service-circle {
-  /* Base mobile radius: 120px */
   --base-radius: 120px;
 }
 
 @media (min-width: 640px) {
   .service-circle {
-    /* Tablet radius: 150px */
     --base-radius: 150px;
   }
 }
 
 @media (min-width: 1024px) {
   .service-circle {
-    /* Desktop radius: 180px */
     --base-radius: 180px;
   }
 }
 
-/* Mobile-specific improvements */
 @media (max-width: 768px) {
-  /* Improve touch targets */
   button, .button, [role="button"] {
     min-height: 44px;
     min-width: 44px;
   }
 
-  /* Better mobile scrolling */
   .animate-scroll {
-    animation-duration: 15s; /* Slower on mobile for better readability */
+    animation-duration: 10s;
   }
 
-  /* Prevent horizontal scroll issues */
   body {
     overflow-x: hidden;
   }
 
-  /* Better mobile carousel dots */
   .dot {
     min-width: 44px;
     min-height: 44px;
